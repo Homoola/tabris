@@ -1,7 +1,16 @@
 var page = tabris.create("Page", {
-  title: "Calendar Widget",
+  title: "homoola calander",
   topLevel: true
 });
+
+
+tabris.create("ESCalendar", {
+  id: "calendar",
+  date: new Date(parseInt(date)).toUTCString(),
+  layoutData: {left: 50, right: 50, top: 0, height: 200}
+}).on("change:date", function(widget, date) {
+  console.error(new Date(parseInt(date)).toUTCString());
+}).appendTo(page);
 
 tabris.create("Button", {
   id: "button",
@@ -12,12 +21,6 @@ tabris.create("Button", {
   console.log("date: " + new Date(parseInt(date)).toUTCString());
 }).appendTo(page);
 
-tabris.create("ESCalendar", {
-  id: "calendar",
-  date: new Date("October 13, 2014").getTime(),
-  layoutData: {left: 0, right: 0, top: 0, bottom: "#button 16"}
-}).on("change:date", function(widget, date) {
-  console.log(new Date(parseInt(date)).toUTCString());
-}).appendTo(page);
+
 
 page.open();
