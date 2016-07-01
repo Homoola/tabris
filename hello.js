@@ -6,10 +6,10 @@ var page = tabris.create("Page", {
 
 tabris.create("ESCalendar", {
   id: "calendar",
-  date: new Date(parseInt(date)).toUTCString(),
+  date: new Date().toUTCString(),
   layoutData: {left: 50, right: 50, top: 0, height: 200}
 }).on("change:date", function(widget, date) {
-  console.error(new Date(parseInt(date)).toUTCString());
+  console.error(new Date().toUTCString());
 }).appendTo(page);
 
 tabris.create("Button", {
