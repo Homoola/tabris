@@ -11,5 +11,8 @@
     <plugin name="cordova-plugin-dialogs" />
     <plugin name="cordova-plugin-inappbrowser" />
     <plugin name="cordova-plugin-network-information" />
+    <plugin name="cordova-plugin-push-notification" />
+    
+    
 	<plugin name="https://github.com/eclipsesource/tabris-calendar.git" />
 </widget>
